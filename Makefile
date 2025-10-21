@@ -1,5 +1,6 @@
+ifndef VERBOSE
 .SILENT:
-
+endif
 
 all: site config
 
