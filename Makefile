@@ -1,8 +1,8 @@
-all: local publish
+all: local
 
 local: save build
 
-publish: all deploy
+publish: deploy
 
 save: site config
 	@git add .
