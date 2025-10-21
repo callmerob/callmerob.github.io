@@ -1,7 +1,3 @@
-ifndef VERBOSE
-.SILENT:
-endif
-
 all: site config
 
 site: public/ src/
@@ -11,3 +7,5 @@ config: Makefile .gitignore astro.config.mjs package.json README.md tsconfig.jso
 	@git add .
 	@git commit -am "astro"
 	@git push
+
+.SILENT:
