@@ -2,7 +2,7 @@ all: local
 
 local: save build
 
-publish: deploy
+publish: all deploy
 
 save: site config
 	@git add .
