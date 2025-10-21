@@ -1,11 +1,11 @@
 all: save build deploy 
 
-build:
-	@npm run build
-
 save: site config
 	@git add .
 	@git commit -am "astro"
+
+build:
+	@npm run build
 
 deploy:
 	@git push
