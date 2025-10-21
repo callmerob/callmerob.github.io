@@ -1,11 +1,17 @@
-all: site config
+all: save build deploy 
 
-site: public/ src/
+build:
 	@npm run build
 
-config: Makefile .gitignore astro.config.mjs package.json README.md tsconfig.json docs/
+save: site config
 	@git add .
 	@git commit -am "astro"
+
+deploy:
 	@git push
+
+site: public/ src/
+
+config: Makefile .gitignore astro.config.mjs package.json README.md tsconfig.json docs/
 
 .SILENT:
