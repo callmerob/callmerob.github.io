@@ -1,4 +1,6 @@
 .SILENT:
+
+
 all:
 	@npm run build
 	@git add .
