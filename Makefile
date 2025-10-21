@@ -1,21 +1,21 @@
 all: local
 
-local: save build
+local: .save .build
 
-publish: local deploy
+publish: .save .build .deploy
 
-save: site config
+.save: .site .config
 	@git add .
 	@git commit -am "astro"
 
-build:
+.build:
 	@npm run build
 
-deploy:
+.deploy:
 	@git push
 
-site: public/ src/
+.site: public/ src/
 
-config: Makefile .gitignore astro.config.mjs package.json README.md tsconfig.json docs/
+.config: Makefile .gitignore astro.config.mjs package.json README.md tsconfig.json docs/
 
 .SILENT:
